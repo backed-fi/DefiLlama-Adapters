@@ -34,7 +34,8 @@ function chainTvl(chain) {
 
     for (const pair of pairs)
     ownerTokens.push([[pair.asset, pair.collateral], pair.address])
-    return sumTokens2({ api, ownerTokens})
+    const ret = await sumTokens2({ api, ownerTokens})
+    return ret
   };
 }
 
